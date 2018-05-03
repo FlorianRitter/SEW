@@ -1,0 +1,36 @@
+package ritter;
+
+import java.awt.Color;
+
+import javax.swing.JFrame;
+
+/**
+ * Eigener Frame
+ * 
+ * @author Florian Ritter
+ * @version 2018-04-23
+ */
+public class MeinFrame extends JFrame {
+	/**
+	 * Erstellt ein Fenster mit dem Titel "Drawing" und der Größe 2000x2000px,...
+	 */
+	public MeinFrame() {
+		super("Drawing");
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		MeinPanel content = new MeinPanel();
+		this.add(content);
+		this.setSize(2000, 2000);
+		this.setBackground(Color.LIGHT_GRAY);
+		this.setVisible(true);
+	}
+
+	/**
+	 * Ruft eigenen Frame auf
+	 * 
+	 * @param args
+	 *            Übergebene Argumente
+	 */
+	public static void main(String[] args) {
+		new MeinFrame();
+	}
+}
