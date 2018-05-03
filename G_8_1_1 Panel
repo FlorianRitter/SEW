@@ -1,0 +1,32 @@
+package ritter;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Dimension;
+
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+/**
+ * Eigenes Panel mit einem Label
+ * 
+ * @author Florian Ritter
+ * @version 2018-04-23
+ */
+@SuppressWarnings("serial")
+public class MeinPanel extends JPanel {
+	/**
+	 * Erstellt ein Panel mit einem Standardborderlayout und einem Label mit dem
+	 * eigenen Namen
+	 */
+	public MeinPanel() {
+		BorderLayout basis = new BorderLayout();
+		this.setLayout(basis);
+
+		JLabel yellowLabel = new JLabel("Florian Ritter");
+		yellowLabel.setOpaque(true);
+		yellowLabel.setBackground(new Color(14, 213, 131));
+		yellowLabel.setPreferredSize(new Dimension(200, 180));
+		this.add(yellowLabel);
+	}
+}
