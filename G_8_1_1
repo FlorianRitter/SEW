@@ -1,0 +1,37 @@
+package ritter;
+
+import java.awt.Color;
+
+import javax.swing.JFrame;
+
+/**
+ * Erstellt GUI
+ * 
+ * @author Florian Ritter
+ * @version 2018-04-23
+ */
+@SuppressWarnings("serial")
+public class MeinFrame extends JFrame {
+	/**
+	 * Erstellt einen Frame mit einem eigenen Panel
+	 */
+	public MeinFrame() {
+		super("Florian Ritter 2AHIT");
+		this.setBackground(new Color(14, 255, 255));
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		MeinPanel content = new MeinPanel();
+		this.add(content);
+		this.pack();
+		this.setVisible(true);
+	}
+
+	/**
+	 * Ruft den Frame auf
+	 * 
+	 * @param args
+	 *            Übergebene Argumente
+	 */
+	public static void main(String[] args) {
+		new MeinFrame();
+	}
+}
